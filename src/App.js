@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import PersonalInfo from './PersonalInfo.js';
+
+const personalData = {
+  name: 'Олена',
+  lastName: 'Петренко',
+  phone: '+1647 843-76-90',
+  email: 'sdfgh@gmail.com',
+  city: 'Запоріжжя',
+  experience: '6 років',
+  skills: 'програміст',
+  photo: 'th.jpg'
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Персональна сторінка</h1>
+      <PersonalInfo {...personalData} />
     </div>
   );
 }
